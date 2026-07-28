@@ -1,0 +1,12 @@
+# ── Evaluation pipeline (eval.py, translate.py, export_results.py) ───────────
+inspect-ai
+openai
+deep-translator
+python-dotenv
+
+# ── Analysis and visualisation (analyze_results.ipynb) ───────────────────────
+numpy
+pandas
+matplotlib
+seaborn
+statsmodels
