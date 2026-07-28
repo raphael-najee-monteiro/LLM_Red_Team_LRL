@@ -40,6 +40,8 @@ ASR measures how often a model complies with a harmful request; ORR measures how
 | Path | Contents |
 | --- | --- |
 | [`src/`](src) | Experiment pipeline and evaluation scripts |
+| [`src/data/`](src/data) | All dataset sizes (1, 10, 50, 100, 300 samples) per language |
+| [`src/data/50_sample/`](src/data/50_sample) | Primary dataset used in the paper (35 LinguaSafe + 15 XSTest, per language) |
 
 ## Reproducing the Experiments
 
@@ -51,6 +53,4 @@ OpenAI-compatible API, or Google Colab with Ollama).
 Prompts in `src/data/` are drawn from the LinguaSafe and XSTest datasets and
 remain subject to their original licenses and attribution terms. All other
 code, data, and documentation in this repository is licensed under
-[CC BY-NC-SA 4.0](LICENSE) (Attribution-NonCommercial-ShareAlike) — free to
-share and adapt for non-commercial purposes, with attribution, under the
-same license.
+[CC BY-NC-SA 4.0](LICENSE).
