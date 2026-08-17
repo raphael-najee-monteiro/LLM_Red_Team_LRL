@@ -1,6 +1,6 @@
 # Appendix: Dataset Selection
 
-**Adversarial Dataset.** The evaluation focuses on the *cybersecurity* domain, a well-defined high-stakes category (credential theft, malware generation, identity theft) where refusal is clearly expected; concentrating on one domain limits confounding by harm category. An adversarial prompt attempts to make a model produce content it has been trained or instructed to refuse, such as instructions for illegal activities or generation of harmful content. These prompts yield a clear binary outcome (comply vs. refuse) and have established benchmarks `[@zou2023universal, @mazeika2024harmbench]`.
+**Adversarial Dataset.** The evaluation focuses on the *cybersecurity* domain, a well-defined high-stakes category (credential theft, malware generation, identity theft) where refusal is clearly expected; concentrating on one domain limits confounding by harm category. An adversarial prompt attempts to make a model produce content it has been trained or instructed to refuse, such as instructions for illegal activities or generation of harmful content. These prompts yield a clear binary outcome (comply vs. refuse) and have established benchmarks `[@zou2023, @mazeika2024]`.
 
 Adversarial prompts are drawn from LinguaSafe `[@ning2025linguasafe]`, a multilingual benchmark aggregating HarmBench and AdvBench with a structured subtype taxonomy. LinguaSafe also provides human-validated Arabic translations, allowing Arabic adversarial prompts to be extracted directly. Subtype labels are inherited and not re-validated, so the subtype breakdown (Sect. 4.4) should be read with this labelling noise in mind.
 
@@ -96,3 +96,12 @@ Table 3 lists the 15 safe prompts in their English source form.
 
 **Translation.** All prompts originate in English. Translation routes are: human-validated Arabic from LinguaSafe (XSTest Arabic via DeepL); DeepL with native-speaker review for German; Google Translate with native-speaker review for Tamil (DeepL lacks Tamil); and, for Swiss German, an LLM (Gemma3:4b) prompted for Zurich-dialect phonology (*isch*, *nöd*, *chönd*, *händ*), as no machine translator supports the dialect. All Swiss German, German, and Tamil translations were manually verified by native speakers for accuracy, natural phrasing, and preservation of adversarial intent, which also mitigates the risk that machine-translation safety filters harmful content. Only the input prompt is translated; the expected-behaviour target field is read solely by the grader and kept in English.
 
+** References **
+Mazeika, M., et al.: Harmbench: A standardized evaluation framework for automated red teaming and robust refusal. In: Proceedings of the 41st Interna-
+tional Conference on Machine Learning (ICML). vol. 235, pp. 35181–35224. PMLR
+(2024), arXiv:2402.04249
+
+Ning, Z., et al.: Linguasafe: A comprehensive multilingual safety benchmark for large language models (2025), arXiv:2508.12733
+
+Zou, A., Wang, Z., Carlini, N., Nasr, M., Kolter, J.Z., Fredrikson, M.: Universal and transferable adversarial attacks on aligned language models (2023),
+arXiv:2307.15043
