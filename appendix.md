@@ -96,7 +96,7 @@ Table 3 lists the 15 safe prompts in their English source form.
 
 **Translation.** All prompts originate in English. Translation routes are: human-validated Arabic from LinguaSafe (XSTest Arabic via DeepL); DeepL with native-speaker review for German; Google Translate with native-speaker review for Tamil (DeepL lacks Tamil); and, for Swiss German, an LLM (Gemma3:4b) prompted for Zurich-dialect phonology (*isch*, *nöd*, *chönd*, *händ*), as no machine translator supports the dialect. All Swiss German, German, and Tamil translations were manually verified by native speakers for accuracy, natural phrasing, and preservation of adversarial intent, which also mitigates the risk that machine-translation safety filters harmful content. Only the input prompt is translated; the expected-behaviour target field is read solely by the grader and kept in English.
 
-** References **
+**References**
 Zou, A., Wang, Z., Carlini, N., Nasr, M., Kolter, J. Z., & Fredrikson, M. (2023). Universal and transferable adversarial attacks on aligned language models. arXiv preprint arXiv:2307.15043.
 
 Ning, Z., Gu, T., Song, J., Hong, S., Li, L., Liu, H., ... & Wang, Y. (2025). Linguasafe: A comprehensive multilingual safety benchmark for large language models. arXiv preprint arXiv:2508.12733.
